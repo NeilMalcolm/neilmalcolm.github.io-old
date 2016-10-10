@@ -2,7 +2,7 @@
 
 /*1110*/
 
-@media only screen and (min-width:1110px){
+@media only screen and (min-width:1255px){
 	body, html, #navigation{
 		margin:0;
 		padding:0;
@@ -471,6 +471,7 @@
 	}
 
 	.quote:first-of-type{
+	  margin-left:0;
 	}
 
 	.quote:last-of-type{
@@ -1216,7 +1217,7 @@
 		transform: translateY(-50%);
 	}
 }
-@media only screen and (max-width: 1110px) and (min-width: 810px){
+@media only screen and (max-width: 1254px) and (min-width: 810px){
 	body, html, #navigation{
 		margin:0;
 		padding:0;
@@ -1630,6 +1631,7 @@
 	.quote-section ul:not(.useful-links){
 	  margin: auto;
 	  padding: 0px;
+		max-width:70%;
 	}
 
 	.useful-links{
@@ -1675,10 +1677,17 @@
 	  /*background: #eee;*/
 	  width: 250px;
 	  vertical-align: top;
-	  margin: 0 1em;
 	  padding: 1.66em 1em 1.33em 1em;
 		transition: 0.2s ease;
 	}
+
+	.quote:first-of-type{
+	  margin: 0 5em 0 0;
+	}
+	.quote:last-of-type{
+	  margin: 0 0 0 5em;
+	}
+
 	.quote i{
 	transition: .2s ease-in-out;
 	}
@@ -1689,13 +1698,13 @@
 
 	}
 
-	.quote:first-of-type{
-	}
+		.quote:first-of-type{
+		  margin-left:0;
+		}
 
-	.quote:last-of-type{
-	  margin-right:0;
-	}
-
+		.quote:last-of-type{
+		  margin-right:0;
+		}
 	.full-width-image{
 		max-height: 700px;
 		min-height: 400px;
@@ -2855,12 +2864,13 @@
 	}
 
 	.useful-links{
-	  text-align: left;
-	  padding: 1em 0 0 0;
+		text-align: center;
+	  margin: 1em 0 0 0;
 	  list-style: none;
 	}
 
 	.useful-links a{
+		text-align: center;
 		text-decoration: underline;
 	}
 
