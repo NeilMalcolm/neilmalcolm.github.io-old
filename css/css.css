@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1, h2{
+  font-family: 'Raleway', sans-serif;
+}
+
+.upper-section{
+  background-color: #54baff;
+  transform: translate(10deg);
+}
+
+.name{
+    font-size: 2.66em;
+    font-weight: bold;
+}
+
+.upper-section h1{
+  margin:0;
+  color:white
+}
+
+.website-section{
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+
+}
+
+.lower-section{
+  text-align: center;
+}
+
+.codepens{
+  display: inline-block;
+  vertical-align: top;
+  max-width: 30%;
+}
