@@ -285,7 +285,7 @@
 	.button-type-b span{
 		position: relative;
 		display: inline-block;
-		background: red;
+		/*background: red;*/
 		width: 0;
 		height: 0;
 	}
@@ -1508,7 +1508,7 @@
 	.button-type-b span{
 		position: relative;
 		display: inline-block;
-		background: red;
+		/*background: red;*/
 		width: 0;
 		height: 0;
 	}
@@ -1731,7 +1731,7 @@
 
 	.body-section-inner{
 	  margin:auto;
-		max-width: 1000px;
+		max-width: 80%;
 	}
 
 	.body-section h3{
@@ -2757,7 +2757,7 @@
 	.button-type-b span{
 		position: relative;
 		display: inline-block;
-		background: red;
+		/*background: red;*/
 		width: 0;
 		height: 0;
 	}
@@ -2972,7 +2972,7 @@
 
 	.body-section-inner{
 	  margin:auto;
-		max-width: 1000px;
+		max-width: 90%;
 	}
 
 	.body-section h3{
@@ -3637,7 +3637,7 @@
 	  max-width: 900px;
 		position: relative;
 	  padding: .5em 2em .5em 2em;
-		background:red;
+		/*background:red;*/
 	}
 
 	.plans{
@@ -3998,7 +3998,7 @@
 	.button-type-b span{
 		position: relative;
 		display: inline-block;
-		background: red;
+		/*background: red;*/
 		width: 0;
 		height: 0;
 	}
@@ -4219,7 +4219,7 @@
 
 	.body-section-inner{
 	  margin:auto;
-		max-width: 1000px;
+		max-width: 95%;
 	}
 
 	.body-section h3{
@@ -4890,7 +4890,7 @@
 	  max-width: 900px;
 		position: relative;
 	  padding: .5em 2em .5em 2em;
-		background:red;
+		/*background:red;*/
 	}
 
 	.plans{
@@ -4967,7 +4967,6 @@
 	  font-family: 'Open sans', sans-serif;
 	}
 	h1, h2, h3, h4, h5{
-
 	  font-family: 'Hind', sans-serif;
 	}
 
@@ -5251,7 +5250,7 @@
 	.button-type-b span{
 		position: relative;
 		display: inline-block;
-		background: red;
+		/*background: red;*/
 		width: 0;
 		height: 0;
 	}
@@ -5472,7 +5471,7 @@
 
 	.body-section-inner{
 	  margin:auto;
-		max-width: 1000px;
+		max-width: 97%;
 	}
 
 	.body-section h3{
@@ -5501,7 +5500,7 @@
 	}
 
 	.student-icons{
-		height: 75px;
+		height: 50px;
 		transition: 0.2s ease;
 	}
 
@@ -5636,9 +5635,9 @@
 
 	.company-info{
 		text-align: center;
-			color: #555;
-			background: white;
-			padding: 2em 0;
+		color: #555;
+		background: white;
+		padding: 2em 0;
 	}
 
 	h1{
@@ -5652,9 +5651,7 @@
 
 	.info-elem{
 		display: inline-block;
-		vertical-align: top;
-		max-width: 200px;
-		padding: 1.99em 0 1.99em 0 ;
+		padding: 1.99em 0 1.99em 0;
 		position: relative;
 	}
 
@@ -5667,15 +5664,19 @@
 	}
 
 	.elem-one{
+		left:26.4px;
+	}
+
+	.elem-two{
 		left:13.2px;
 	}
 
 	.elem-three{
-		left:-26.4px;
+		left:-13.2px;
 	}
 
 	.elem-four {
-		left:-39.8px;
+		left:-26.4px;
 	}
 
 	.elem-three h2{
@@ -5712,12 +5713,36 @@
 
 	.info-list .student-icons{
 		height:50px;
-		display: inline;
 		transition: 0.2s ease;
+		top:50%;
+		transform: translateY(50%);
+		position: relative;
 	}
 
 	.info-list h2{
-		display:inline;
+		display:inline-block;
+		margin:0;
+		padding: 0;
+		margin-left: 1em;
+		max-width: 70%;
+		vertical-align: middle;
+	}
+
+	.info-elem{
+		text-align: center;
+		display: inline-block;
+	}
+
+	.info-elem p{
+		vertical-align: middle;
+	}
+
+	.info-list a{
+		display: inline-block;
+		max-width: 70%;
+		margin-left: 5em;
+		position: relative;
+		vertical-align: middle;
 	}
 
 	.customer-testimony{
@@ -6153,7 +6178,7 @@
 	  max-width: 900px;
 		position: relative;
 	  padding: .5em 2em .5em 2em;
-		background:red;
+		/*background:red;*/
 	}
 
 	.plans{
