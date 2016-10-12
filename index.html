@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/css.css" media="screen" title="no title">
     <link rel="stylesheet" href="./css/font-awesome-4.6.3/css/font-awesome.css" media="screen" title="no title">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src='./js/jquery-3.1.0.js'></script>
     <script type="text/javascript" src='./js/js.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:600,900|Source+Sans+Pro:400,600i" rel="stylesheet">
   </head>
@@ -22,14 +23,37 @@
     </div>
     <section id='home-section' class='body-section'>
       <div class="title">
-          <h1>Neil Malcolm</h1>
-          <h2>Web Design &amp; Development</h2>
-          <a href="#" class='square-button'>About Me</a>
+          <h1 class='elem-to-move-up'>Neil Malcolm</h1>
+          <div class="horizontal-separator separator elem-to-move-up"></div>
+          <h2 class='elem-to-move-up'>Web Design &amp; Development</h2><br>
+          <a href="#" class=' elem-to-move-up square-button'>About Me</a>
       </div>
       <a href="#" class='show-content' id='show-home'><i class="fa fa-angle-down" aria-hidden="true"></i></a>
     </section>
-    <section id='about-section' class='body-section'>
-
+    <section id='projects-section' class='body-section'>
+        <div class="sites-container">
+          <div class="sites-element">
+          <a href="./Hammerstone/index.html"><img src="./img/hammerstone.png" alt="" />
+            <h3>Hammerstone</h3>
+            <p>
+              I created a front page for a fictional Insurance provider, highlighting css animations and use of JavaScript interactions. (unfinished).
+            </p></a>
+          </div>
+          <div class="sites-element">
+          <a href="./HetLax/index.html"><img src="./img/hetlax.png" alt="" />
+            <h3>HetLax</h3>
+            <p>
+              I am currently working on a webpage for a fictional text-editor/web IDE named HetLax. It uses a position-based system to determine the current position on the page and allows the user to navigate clearly.
+            </p></a>
+          </div>
+          <div class="sites-element">
+            <a href="./Windows98/index.html"><img src="./img/98.png" alt="" />
+            <h3>Windows 98</h3>
+            <p>
+              I am currently working on recreating several aspects of the Windows 98 Operating System in a browser. Current functionality includes:
+            </p></a>
+          </div>
+        </div>
     </section>
     <!-- <div class="header">
       <h1 class='name'>Neil Malcolm</h1>
