@@ -101,14 +101,14 @@ h1{
   font-size: 5em;
   font-weight: 900;
   margin: 0;
+  padding: .05em .33em;
 }
 
 
 h2{
   font-family: 'Source sans-pro', sans-serif;
   font-weight: 200;
-  display: inline-block;
-  margin: 0.5em 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 h1, h2, h3{
@@ -143,6 +143,7 @@ a{
   display: inline-block;
   height: 60vh;
   top:40%;
+  overflow: hidden;
 }
 
 .horizontal-separator{
@@ -150,6 +151,38 @@ a{
   background: white;
   height: 1px;
   margin: auto;
+
+}
+
+.vertical-separator{
+  height: 0;
+  background: white;
+  width: 1px;
+  margin: auto;
+}
+
+.top{
+  top:0;
+  float:right;
+  position: absolute;
+}
+
+.bottom{
+  float:left;
+  top: 20px;
+  position: absolute;
+}
+
+.right{
+  float:right;
+  right:0;
+  position: absolute;
+}
+
+.left{
+  float:left;
+  left:0;
+  position: absolute;
 }
 
 #home-section a{
@@ -208,13 +241,13 @@ a{
 
 @keyframes rotate-up-anim{
   0%{
-    transform: rotate(5deg);
+    transform: rotate(10deg);
   }
-  80{
-    transform: rotate(30deg);
+  80%{
+    transform: rotate(0deg);
   }
   100{
-    transform: rotate(-5deg);
+    transform: rotate(0deg);
   }
 }
 

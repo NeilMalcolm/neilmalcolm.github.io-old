@@ -62,7 +62,7 @@ $(window).ready(function(event){
     var marginToAffect = getAnimationDirection(direction);
     console.log('top: ' + marginToAffect);
 
-    if (elem.hasClass('separator'))
+    if (elem.hasClass('horizontal-separator'))
     {
       // elem.animate({
       //   'top': 0 + 'px'
@@ -75,7 +75,16 @@ $(window).ready(function(event){
       elem.animate({
         'top': 0 + 'px'
       }, duration, function(){
-          spreadSeparator(elem, duration);
+          spreadHorizontalSeparator(elem, duration);
+          console.log('finished');
+      });
+    }
+    else if(elem.hasClass('vertical-separator'))
+    {
+      elem.animate({
+        'top': 0 + 'px'
+      }, duration, function(){
+          spreadVerticalSeparator(elem, duration);
           console.log('finished');
       });
     }
@@ -88,10 +97,22 @@ $(window).ready(function(event){
     }
     console.log('top: ' + elem.marginTop);
   }
-  function spreadSeparator(elem, duration){
+  function spreadHorizontalSeparator(elem, duration){
     elem.css('opacity', 1);
     elem.animate({
-      'width': '100%'
+      'width':  '100%'
+    }, duration);
+  }
+
+  function spreadVerticalSeparator(elem, duration){
+    elem.css('opacity', 1);
+      elem.css('position', 'absolute');
+    if(elem.hasClass('left')){
+      elem.css('margin-top', parseInt($('.name-title').outerHeight()) + 1 + 'px');
+    }
+    elem.animate({
+      'margin-top': '0px',
+      'height': parseInt($('.name-title').outerHeight()) + 1 + 'px'
     }, duration);
   }
 
