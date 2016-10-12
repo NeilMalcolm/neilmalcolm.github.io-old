@@ -277,6 +277,10 @@ a{
   position: relative;
 }
 
+.sites-element:hover{
+  box-shadow: inset 0 -1000px 0 0 blue;
+}
+
 .sites-element *{
   transform: skewX(-3deg);
 }

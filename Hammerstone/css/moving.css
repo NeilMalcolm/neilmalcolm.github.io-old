@@ -2522,7 +2522,7 @@
 	  padding: 1em 0;
 	  position: absolute;
 	  z-index: 10;
-		right:15%;
+		width: 100%;
 		text-align: center;
 		transition: 0.2s ease;
 	}
@@ -2539,7 +2539,7 @@
 	}
 
 	.head{
-	    height: 500px;
+	    height: 100vh;
 	    overflow: hidden;
 	    /*background-image: url('../images/field.jpg');
 			background-position: 0 100%;*/
@@ -2547,6 +2547,7 @@
 			filter: contrast(110%);
 			background-size: cover;
 	    text-align: center;
+			transition: 0.2s ease;
 	}
 	.columns{
 	  color: white;
@@ -3589,7 +3590,6 @@
 	  font-size: .8em;
 	  padding: .5em 0 0 0;
 	  text-align: center;
-	  min-width: 500px;
 	  max-width: 900px;
 	  margin: auto;
 	}
@@ -3605,10 +3605,10 @@
 
 	.list-cont{
 	  margin: auto;
-	  min-width: 500px;
 	  max-width: 900px;
 		position: relative;
 	  padding: .5em 2em .5em 2em;
+		background:red;
 	}
 
 	.plans{
