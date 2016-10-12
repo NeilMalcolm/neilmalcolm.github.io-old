@@ -41,7 +41,7 @@ $(window).ready(function(event){
     $(this).css('transition', '.88s ease-out top');
     $(this).css('transition', '.3s ease box-shadow');
     $(this).css('top', 250 * (index+1) + 'px');
-    $(this).css('animation', 'rotate-up-anim 1s forwards ease-out');
+    $(this).css('animation', 'rotate-up-anim .5s forwards ease-out');
     animateUp($(this), 1000, 'top', -10);
   });
 
