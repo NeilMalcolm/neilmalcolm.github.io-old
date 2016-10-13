@@ -45,7 +45,15 @@ $(window).ready(function(event){
     animateUp($(this), 1000, 'top', -10);
   });
 
-
+  $(window).resize(function(event){
+    $('.vertical-separator').each(function(e){
+      if($(this) .outerHeight() > parseInt($('.name-title').outerHeight()) +1 ||
+        $(this) .outerHeight() < parseInt($('.name-title').outerHeight()) + 1){
+                spreadVerticalSeparator(  $(this), 0);
+                console.log('finished');
+          }
+    });
+  });
 
   function animateElements(elem, duration, direction, to){
 
@@ -105,15 +113,22 @@ $(window).ready(function(event){
   }
 
   function spreadVerticalSeparator(elem, duration){
+    console.log('happen');
     elem.css('opacity', 1);
       elem.css('position', 'absolute');
     if(elem.hasClass('left')){
       elem.css('margin-top', parseInt($('.name-title').outerHeight()) + 1 + 'px');
+      elem.animate({
+        'margin-top': '0px',
+        'height': parseInt($('.name-title').outerHeight()) + 1 + 'px'
+      }, duration);
+    } else {
+      console.log('right');
+      elem.animate({
+        'margin-top': '0px',
+        'height': parseInt($('.name-title').outerHeight()) + 1 + 'px'
+      }, duration);
     }
-    elem.animate({
-      'margin-top': '0px',
-      'height': parseInt($('.name-title').outerHeight()) + 1 + 'px'
-    }, duration);
   }
 
   function getStartDirection(direction){
