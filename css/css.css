@@ -262,10 +262,10 @@
     font-family: 'Raleway', sans-serif;
     display: inline-block;
     font-size: 5em;
-      font-size: 11vw;
+      font-size: 10vw;
     font-weight: 900;
     margin: 0;
-    padding: .05em .05em;
+    padding: .05em .4em;
     transition: 0.3s ease;
   }
 
@@ -311,7 +311,6 @@
     top:40%;
     max-width: 90%;
     overflow: hidden;
-    background: red;
   }
 
   .horizontal-separator{

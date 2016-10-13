@@ -120,13 +120,13 @@ $(window).ready(function(event){
       elem.css('margin-top', parseInt($('.name-title').outerHeight()) + 1 + 'px');
       elem.animate({
         'margin-top': '0px',
-        'height': parseInt($('.name-title').outerHeight()) + 1 + 'px'
+        'height': Math.round(parseInt($('.name-title').outerHeight())) + 2 + 'px'
       }, duration);
     } else {
       console.log('right');
       elem.animate({
         'margin-top': '0px',
-        'height': parseInt($('.name-title').outerHeight()) + 1 + 'px'
+        'height': Math.round(parseInt($('.name-title').outerHeight())) + 2 + 'px'
       }, duration);
     }
   }
