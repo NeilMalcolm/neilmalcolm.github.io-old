@@ -81,6 +81,42 @@ a{
 	margin-left: auto;
 	margin-right: auto;
 	z-index: 1;*/
+	position: relative;
+	overflow: hidden;
+}
+
+.scroll-b img{
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.scroll-a img{
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.bg-scroll{
+	position: absolute;
+	top:0;
+	width: 500px;
+}
+
+.left-scroll{
+	right:80%;
+}
+
+.scroll-b .left-scroll{
+	right: 75%;
+}
+
+.scroll-b .right-scroll{
+	left: 75%;
+}
+
+.right-scroll{
+	left:80%;
 }
 
 .vid-container{

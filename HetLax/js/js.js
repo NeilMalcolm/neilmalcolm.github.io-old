@@ -19,8 +19,26 @@ $(document).ready(function(){
 	// 	}
 
 	// }
+	outerAnim();
+	innerAnim();
 
+	function outerAnim(){
+		$('.scroll-a').animate({
+			'top' : -$(this).outerHeight() + 'px'
+		}, 500000, "linear", function(){
+				$('.scroll-a').css('top', 0);
+				outerAnim();
+		});
+	}
 
+	function innerAnim(){
+		$('.scroll-b').animate({
+			'top' : -$(this).outerHeight() + 'px'
+		}, 200000, "linear", function(){
+				$('.scroll-b').css('top', 0);
+				innerAnim();
+		});
+	}
 
 	var paper = Snap('#menu');
 	$('#menu').click(function(event) {
@@ -323,6 +341,17 @@ $(document).ready(function(){
 
 
 	$(".navbar-list").children('li').children('a').click(function(event){
+
+		if($('.navbar-list').hasClass('show-navbar')){
+			$('.navbar-list').removeClass('show-navbar');
+			$('.navbar-list').children('li').children('a').css('padding', 'initial');
+			var aBox = lineA.getBBox();
+			var bBox = lineB.getBBox();
+			var rotSpeed = 300;
+			lineA.animate( { 'transform': "R" + 0 + "," + aBox.x +"," + aBox.y }, rotSpeed );
+			lineB.animate( { 'transform': "R" + 0 + "," + bBox.x +"," + bBox.y2 }, rotSpeed );
+		}
+
 		event.preventDefault();
 		var clickedButton = $(this),
 			speedVal = $(window).scrollTop() - $( $.attr(this, 'href') ).offset().top;
