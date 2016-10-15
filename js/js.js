@@ -36,6 +36,10 @@
 $(window).ready(function(event){
   console.log('ready');
 
+  $('.fa-close').click(function(e){
+    $(this).parent('span').parent('div').css('animation', 'drop-down 1s ease backwards');
+  });
+
   $('#about-me').click(function(e){
     e.preventDefault();
     $('body, html').animate({
