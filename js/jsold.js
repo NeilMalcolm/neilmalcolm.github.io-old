@@ -36,19 +36,11 @@
 $(window).ready(function(event){
   console.log('ready');
 
-  $('#about-me').click(function(e){
-    e.preventDefault();
-    $('body, html').animate({
-      scrollTop: $('#about-section').offset().top
-    }, 300);
-  });
-
   $('.elem-to-move-up').each(function(index, value){
     // prepareForAnimation($(this), 'down', 500);
-    $(this).addClass('no-transition');
     $(this).css('top', 250 * (index+1) + 'px');
-    $(this).css('animation', 'rotate-up-anim .5s forwards ease-out');
-    animateUp($(this), 1000, 'top', -10);
+    // $(this).css('animation', 'rotate-up-anim .5s forwards ease-out');
+    animateUp($(this), ((index+1) * 500), 'top', 0);
   });
 
   $(window).resize(function(event){
@@ -76,6 +68,7 @@ $(window).ready(function(event){
     var marginToAffect = getAnimationDirection(direction);
     console.log('top: ' + marginToAffect);
 
+    console.log('margin: ' + elem.offset().top);
     if (elem.hasClass('horizontal-separator'))
     {
       // elem.animate({
@@ -87,8 +80,9 @@ $(window).ready(function(event){
       //   }, duration);
       // });
       elem.animate({
-        'top': 0 + 'px'
-      }, duration, function(){
+        'top': 0
+      }, duration, 'linear', function(){
+      console.log('margin: ' + elem.offset().top);
           spreadHorizontalSeparator(elem, duration);
           console.log('finished');
       });
@@ -96,21 +90,21 @@ $(window).ready(function(event){
     else if(elem.hasClass('vertical-separator'))
     {
       elem.animate({
-        'top': 0 + 'px'
-      }, duration, function(){
+        'top': 0
+      }, duration, 'linear', function(){
+      console.log('margin: ' + elem.offset().top);
           spreadVerticalSeparator(elem, duration);
           console.log('finished');
       });
     }
     else {
       elem.animate({
-        'top': 0 + 'px',
+        'top': 0,
         'opacity': 1
-      }, duration, function(){
-        $(this).removeClass('no-transition');
+      }, duration, 'linear', function(){
+      console.log('margin: ' + elem.offset().top);
       });
     }
-    console.log('top: ' + elem.marginTop);
   }
   function spreadHorizontalSeparator(elem, duration){
     elem.css('opacity', 1);
